@@ -81,9 +81,9 @@ public abstract class Bag {
             this.contents = Arrays.copyOf(this.contents, this.numberOfContents + 1);
             this.contents[this.numberOfContents] = item;
             this.numberOfContents += 1;
-            return Boolean.TRUE;
+            return true;
         }
-        return Boolean.FALSE;
+        return false;
     }
 
 
