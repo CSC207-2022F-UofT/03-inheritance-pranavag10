@@ -76,12 +76,14 @@ public abstract class Bag {
      *       This method should return true if the item was added
      *       and false otherwise.
      */
-    public void addItem(String item){
+    public Boolean addItem(String item){
         if (this.numberOfContents < this.capacity){
             this.contents = Arrays.copyOf(this.contents, this.numberOfContents + 1);
             this.contents[this.numberOfContents] = item;
             this.numberOfContents += 1;
+            return Boolean.TRUE;
         }
+        return Boolean.FALSE;
     }
 
 
